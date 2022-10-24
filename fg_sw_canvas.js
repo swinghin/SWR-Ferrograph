@@ -347,3 +347,20 @@ function mapToString(map) {
     }
     return output;
 }
+
+function numSuffix(num) {
+    // floor: make integer, abs: make positive, % 100: pattern repeats every 100 numbers
+    newNum = Math.floor(Math.abs(num)) % 100;
+    // if number is 11-19, append "th"
+    if (newNum > 10 && newNum < 20) {
+        return "th";
+    } else {
+        // all other numbers, ends in 1=>"st" 2=>"nd" 3=>"rd", default "th", 
+        switch (newNum % 10) {
+            case 1: return "st";
+            case 2: return "nd";
+            case 3: return "rd";
+            default: return "th";
+        }
+    }
+}

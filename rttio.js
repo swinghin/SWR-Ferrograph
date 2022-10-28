@@ -32,9 +32,9 @@ var bootupTime = window.setInterval(function () {
           if (i < 2) {
             printStringToMap(lineSlotMaps[i * 2], String(i + 1), 0, 0);
             printStringToMap(lineSlotMaps[i * 2], numSuffix(i + 1), 6, 0);
-            printStringToMap(lineSlotMaps[i * 2], res.services[i].locationDetail.gbttBookedArrival, 22, 0);
+            printStringToMap(lineSlotMaps[i * 2], res.services[i].locationDetail.gbttBookedDeparture, 22, 0);
             printStringToMap(lineSlotMaps[i * 2], res.services[i].locationDetail.destination[0].description.substring(0, 18), 50, 0);
-            printStringToMap(lineSlotMaps[i * 2], res.services[i].locationDetail.realtimeArrival, 164, 0);
+            printStringToMap(lineSlotMaps[i * 2], res.services[i].locationDetail.realtimeDeparture, 164, 0);
           }
           setBitAll(false);
         }

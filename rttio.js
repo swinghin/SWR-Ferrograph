@@ -79,7 +79,8 @@ function getServiceStops(serviceUid, runDate, tiploc) {
       });
       var callstr = "Calling at: "
       for (var i = 0; i < stops.length; i++) {
-        if (i < stops.length - 1) callstr += `${stops[i].description} (${stops[i].gbttBookedArrival.substring(0, 2)}:${stops[i].gbttBookedArrival.substring(2, 4)}), `;
+        if (stops.length == 1) callstr += `${stops[i].description} (${stops[i].gbttBookedArrival.substring(0, 2)}:${stops[i].gbttBookedArrival.substring(2, 4)}) only. `;
+        else if (i < stops.length - 1) callstr += `${stops[i].description} (${stops[i].gbttBookedArrival.substring(0, 2)}:${stops[i].gbttBookedArrival.substring(2, 4)}), `;
         else callstr += `and ${stops[i].description} (${stops[i].gbttBookedArrival.substring(0, 2)}:${stops[i].gbttBookedArrival.substring(2, 4)}). `;
       }
 

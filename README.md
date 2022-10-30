@@ -1,4 +1,4 @@
-# Ferrograph-NextTrain-SWR
+# Online Departure Board - SWR Ferrograph 
 
 This project is an HTML canvas object that aims to recreate Ferrograph Next Train Indicator screens installed at South Western Railway platforms.
 
